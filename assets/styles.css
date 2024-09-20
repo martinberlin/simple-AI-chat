@@ -121,8 +121,6 @@ h4.card-title {
 }
 
 .media-chat .media-body {
-    -webkit-box-flex: initial;
-    flex: initial;
     display: table;
 }
 
@@ -151,9 +149,6 @@ h4.card-title {
 }
 
 .media-meta-day {
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
     align-items: center;
     margin-bottom: 0;
     color: #8b95a5;
@@ -173,15 +168,11 @@ h4.card-title {
 
 .media-meta-day::before, .media-meta-day::after {
     content: '';
-    -webkit-box-flex: 1;
-    flex: 1 1;
     border-top: 1px solid #ebebeb;
 }
 
 .media-meta-day::after {
     content: '';
-    -webkit-box-flex: 1;
-    flex: 1 1;
     border-top: 1px solid #ebebeb;
 }
 
@@ -192,14 +183,13 @@ h4.card-title {
 .media-chat.media-chat-reverse {
     padding-right: 12px;
     padding-left: 64px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    flex-direction: row-reverse;
 }
 
 .media-chat {
     padding-right: 64px;
     margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .media {
