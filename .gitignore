@@ -1,0 +1,4 @@
+# exclude this delicious files
+vendor
+.idea
+.env
