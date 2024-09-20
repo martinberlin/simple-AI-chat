@@ -33,7 +33,8 @@ if ($status == 200) {
     $dec = json_decode($data,true);
     if (is_array($dec['choices'])) {
         $choices = $dec['choices'][0];
-        echo $choices['message']['content'];
+        $Parsedown = new Parsedown();
+        echo $Parsedown->text($choices['message']['content']);
     } else {
         echo "Could not parse API response. More: ";
         print_r($dec);

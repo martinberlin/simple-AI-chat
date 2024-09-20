@@ -11,7 +11,7 @@ $(document).ready(function() {
             async: false,
 
             success: function(result){
-                $("#response").text(result);
+                $("#response").html(result);
             },
 
             error: function(error){
