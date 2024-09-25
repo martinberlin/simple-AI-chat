@@ -40,7 +40,7 @@ $tem_img = <<<EOT
             {
                 "role": "user",
                 "content": [{"text": "_QUESTION_", "type": "text"}, 
-                {"image_url": {"url":"_IMAGEURL_","detail":"medium"}, "type": "image_url"}]
+                {"image_url": {"url":"_IMAGEURL_","detail":"high"}, "type": "image_url"}]
             }
         ],
         "model": "gpt-4o"

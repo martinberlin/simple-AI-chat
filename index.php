@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
                             <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
                             <input id="selectFile" type="file" name="image" title="Analyze image and deliver a description using AI" >
                             <?php if ($upload_satus) { ?>
-                            <button class="form-control" href="index.php">Clear image</button>
+                            <a class="form-control" href="index.php">Clear image</a>
                             <?php } ?>
                         </form>
                     </span>

@@ -24,13 +24,13 @@ curl_setopt($curl, CURLOPT_POSTFIELDS, $input);
 
 // get stringified data/output. See CURLOPT_RETURNTRANSFER
 $data = curl_exec($curl);
-
-$status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 // close curl resource to free up system resources
 curl_close($curl);
-
-if ($status == 200) {
+if ($data) {
     $dec = json_decode($data,true);
+    if (isset($dec['error'])) {
+        exit($dec['error']['message']);
+    }
     if (is_array($dec['choices'])) {
         $choices = $dec['choices'][0];
         $Parsedown = new Parsedown();
@@ -40,5 +40,5 @@ if ($status == 200) {
         print_r($dec);
     }
 } else {
-    echo "There was an error in the request. Status: $status";
+    echo "There was an error in the request";
 }
