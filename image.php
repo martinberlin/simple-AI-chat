@@ -35,6 +35,7 @@ if ($data) {
         $choices = $dec['choices'][0];
         $Parsedown = new Parsedown();
         echo $Parsedown->text($choices['message']['content']);
+        echo '<br><img style="width:60%" src="'.$image_url.'">';
     } else {
         echo "Could not parse API response. More: ";
         print_r($dec);
