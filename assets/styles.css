@@ -264,10 +264,16 @@ button, input, optgroup, select, textarea {
     transition: .2s linear;
 }
 
-.file-group {
+/*.file-group {
     position: relative;
     overflow: hidden;
 }
+.file-group input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    width: 20px;
+}*/
 
 .publisher-btn {
     background-color: transparent;
@@ -280,12 +286,7 @@ button, input, optgroup, select, textarea {
     transition: .2s linear;
 }
 
-.file-group input[type="file"] {
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-    width: 20px;
-}
+
 
 .text-info {
     color: #48b0f7 !important;
