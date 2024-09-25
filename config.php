@@ -8,8 +8,12 @@ $dotenv->load();
 $apiurl = "https://models.inference.ai.azure.com/chat/completions";
 
 // IMAGE Uploads
-$upload_dir = './uploads/';
+$webimage_path = $_SERVER['HTTP_HOST'] .'/'. basename(__DIR__) .'/';
+$upload_path = "uploads";
+$upload_dir = "./{$upload_path}/";
+$http_port = ($_SERVER['SERVER_PORT'] == 80) ? 'http://' : 'https://';
 $ai_image_describe = "What is in the image?";
+
 $tem_chat = <<<EOT
 {
         "messages": [
@@ -35,7 +39,7 @@ $tem_img = <<<EOT
             },
             {
                 "role": "user",
-                "content": [{"text": "$ai_image_describe", "type": "text"}, 
+                "content": [{"text": "_QUESTION_", "type": "text"}, 
                 {"image_url": {"url":"_IMAGEURL_","detail":"medium"}, "type": "image_url"}]
             }
         ],

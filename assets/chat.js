@@ -25,11 +25,15 @@ $(document).ready(function() {
 
         var input = $("#input").val();
             console.log("Send request to API: "+input);
+        backend_url = 'chat.php'
+            if (upload_status) {
+                backend_url = 'image.php'
+            }
 
         $.ajax({
             type: 'POST',
-            data: { request: input },
-            url: 'chat.php',
+            data: { request: input, image: upload_url },
+            url: backend_url,
             async: true,
 
             success: function(result){
